@@ -1,0 +1,30 @@
+{
+  "name": "iSave",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Sistema de alerta para enchentes e desastres naturais",
+  "repository": "https://github.com/carlosasj/iSave",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.3.1",
+    "http-server": "^0.6.1",
+    "shelljs": "^0.2.6",
+    "grunt": "^1.0.1",
+    "grunt-changed": "^1.0.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "scripts": {
+    "binst": "bower install",
+    "postinstall": "bower update",
+    "prestart": "npm update",
+    "serve": "http-server ./prod -a localhost -p 3000"
+  }
+}
