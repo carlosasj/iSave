@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                     'bower_components/angular-messages/angular-messages.min.js',
                     // 'bower_components/angular-cookies/angular-cookies.min.js',
                     // 'bower_components/angular-ui-notification/dist/angular-ui-notification.min.js',
-                    // 'bower_components/angular-google-maps-native/dist/angular-google-maps-native.min.js',
+                    'bower_components/angular-google-maps-native/dist/angular-google-maps-native.min.js',
                     // 'bower_components/textAngular/dist/textAngular-rangy.min.js',
                     // 'bower_components/textAngular/dist/textAngular-sanitize.min.js',
                     // 'bower_components/textAngular/dist/textAngular.min.js',

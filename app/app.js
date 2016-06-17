@@ -1,7 +1,8 @@
 angular.module("iSaveApp", [
     "ngMaterial",
     "ngRoute",
-    "ngAnimate"
+    "ngAnimate",
+    "GoogleMapsNative"
 ]).config(["$mdThemingProvider", "$mdIconProvider", function($mdThemingProvider, $mdIconProvider){
     $mdThemingProvider.theme('default')
         .primaryPalette('light-blue', {

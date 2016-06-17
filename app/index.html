@@ -16,9 +16,9 @@
 	<base href="/">
 </head>
 
-<body ng-app="iSaveApp" layout="column">
+<body ng-app="iSaveApp" layout="column" ng-cloak>
 
-<md-whiteframe class="md-whiteframe-3dp" flex-sm="100" layout layout-align="center center">
+<md-whiteframe class="md-whiteframe-4dp" flex-sm="100" layout layout-align="center center">
 	<md-toolbar>
 		<div class="md-toolbar-tools">
 			<md-button class="md-icon-button" aria-label="Settings">
@@ -40,8 +40,7 @@
 			class="md-sidenav-left"
 			md-component-id="sidenav-left"
 			md-is-locked-open="$mdMedia('gt-md')"
-			md-disable-backdrop
-			md-whiteframe="4">
+			md-disable-backdrop>
 		<md-toolbar>
 			<h1 class="md-toolbar-tools">Filtros</h1>
 		</md-toolbar>
@@ -59,24 +58,28 @@
 		</md-content>
 	</md-sidenav>
 
-	<md-content flex layout-padding>
-		<div layout="column" layout-fill layout-align="top center">
-			<p>Aqui vai o mapa</p>
-		</div>
+	<md-content flex layout-padding class="md-whiteframe-8dp" style="z-index: 99">
+		<gm-map layout="column" layout-fill ng-cloak gm-address="{address: 'Av. São Carlos, São Carlos, SP'}" options="{zoom: 13,
+																																										 mapTypeControl: false,
+																																										 streetViewControl: false,
+																																										 zoomControl: false}">
+			<gm-marker position="map.getCenter()">
+				<gm-infowindow options="{content: 'Av. São Carlos, São Carlos, SP'}"></gm-infowindow>
+			</gm-marker>
+		</gm-map>
 	</md-content>
 
 	<md-sidenav
 			class="md-sidenav-right"
 			md-component-id="sidenav-right"
 			md-is-locked-open="$mdMedia('gt-md')"
-			md-disable-backdrop
-			md-whiteframe="4">
+			md-disable-backdrop>
 		<md-toolbar>
 			<h1 class="md-toolbar-tools">Comentários</h1>
 		</md-toolbar>
 		<md-content>
 			<md-list flex>
-				<md-list-item class="md-3-line md-long-text">
+				<md-list-item class="md-3-line md-long-text" ng-click="null">
 					<img ng-src="https://lh6.ggpht.com/JWk0waKYxAVbuIavYsRimLK3859m_s-MWJpSXkoQ8ejLpPvge_iF_xHiomfMAgYb1oF-=w300" class="md-avatar" alt="Danger" />
 					<div class="md-list-item-text">
 						<h3>Título ou nome do usuário</h3>
