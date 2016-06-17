@@ -21,20 +21,20 @@ module.exports = function(grunt) {
             from_min: {
                 src: [
                     'bower_components/jquery/dist/jquery.min.js',
-                    'bower_components/angular/angular.min.js',
+                    'bower_components/angular/angular.js',
                     'bower_components/angular-route/angular-route.min.js',
+                    'bower_components/angular-animate/angular-animate.min.js',
+                    'bower_components/angular-aria/angular-aria.min.js',
+                    'bower_components/angular-messages/angular-messages.min.js',
                     // 'bower_components/angular-cookies/angular-cookies.min.js',
                     // 'bower_components/angular-ui-notification/dist/angular-ui-notification.min.js',
-                    'bower_components/angular-animate/angular-animate.min.js',
-                    'bower_components/angular-google-maps-native/dist/angular-google-maps-native.min.js',
-                    // 'bower_components/ng-file-upload/ng-file-upload.min.js',
+                    // 'bower_components/angular-google-maps-native/dist/angular-google-maps-native.min.js',
                     // 'bower_components/textAngular/dist/textAngular-rangy.min.js',
                     // 'bower_components/textAngular/dist/textAngular-sanitize.min.js',
                     // 'bower_components/textAngular/dist/textAngular.min.js',
                     // 'bower_components/angular-gettext/dist/angular-gettext.min.js',
-                    'bower_components/angular-aria/angular-aria.min.js',
-                    'bower_components/angular-material/angular-material.min.js',
-                    'partial/js/*.js'
+                    'bower_components/angular-material/angular-material.js',
+                    'partial/js/uglified.min.js'
                 ],
                 dest: 'prod/js/all.min.js'
             }
