@@ -14,5 +14,5 @@ angular.module("iSaveApp", [
         )
         .accentPalette('amber');
 }]).run(['$rootScope', function($rootScope) {
-    console.log("RUN!");
+    // console.log("RUN!");
 }]);

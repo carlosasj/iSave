@@ -34,7 +34,7 @@ module.exports = function(grunt) {
                     // 'bower_components/textAngular/dist/textAngular.min.js',
                     // 'bower_components/angular-gettext/dist/angular-gettext.min.js',
                     'bower_components/angular-material/angular-material.js',
-                    'partial/js/uglified.min.js'
+                    'partial/js/to_min.js'
                 ],
                 dest: 'prod/js/all.min.js'
             }

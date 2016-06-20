@@ -1,0 +1,28 @@
+<md-dialog aria-label="{{item.title}}" flex-sm="95" flex-md="65" flex-lg="50">
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<h2>{{bla}} - {{item.title}}</h2>
+			<span flex></span>
+			<md-button class="md-icon-button" ng-click="cancel()">
+				<i class="material-icons" aria-label="Close dialog">close</i>
+			</md-button>
+		</div>
+	</md-toolbar>
+	<form>
+		<md-dialog-content>
+			<div class="md-dialog-content">
+				<h2>{{item.id}}</h2>
+				<p>{{item.text}}</p>
+			</div>
+		</md-dialog-content>
+		<md-dialog-actions layout="row">
+			<span flex></span>
+			<md-button ng-click="updated('not useful')">
+				Not Useful
+			</md-button>
+			<md-button ng-click="updated('useful')">
+				Useful
+			</md-button>
+		</md-dialog-actions>
+	</form>
+</md-dialog>

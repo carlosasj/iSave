@@ -25,7 +25,7 @@
 				<i class="material-icons">menu</i>
 			</md-button>
 			<h2>
-				<span>iSave</span>
+				<span>SYS</span>
 			</h2>
 			<span flex></span>
 			<md-button class="md-icon-button" aria-label="More">
@@ -35,65 +35,7 @@
 	</md-toolbar>
 </md-whiteframe>
 
-<section layout="row" flex>
-	<md-sidenav
-			class="md-sidenav-left"
-			md-component-id="sidenav-left"
-			md-is-locked-open="$mdMedia('gt-md')"
-			md-disable-backdrop>
-		<md-toolbar>
-			<h1 class="md-toolbar-tools">Filtros</h1>
-		</md-toolbar>
-		<md-content layout-padding>
-			<form>
-				<md-input-container>
-					<label for="testInput">Test input</label>
-					<input type="text" id="testInput"
-								 ng-model="data" md-autofocus>
-				</md-input-container>
-			</form>
-			<!--<md-button ng-click="close()" class="md-primary" hide-gt-md>-->
-				<!--Close Sidenav Left-->
-			<!--</md-button>-->
-		</md-content>
-	</md-sidenav>
-
-	<md-content flex layout-padding class="md-whiteframe-8dp" style="z-index: 99">
-		<gm-map layout="column" layout-fill ng-cloak gm-address="{address: 'Av. São Carlos, São Carlos, SP'}" options="{zoom: 13,
-																																										 mapTypeControl: false,
-																																										 streetViewControl: false,
-																																										 zoomControl: false}">
-			<gm-marker position="map.getCenter()">
-				<gm-infowindow options="{content: 'Av. São Carlos, São Carlos, SP'}"></gm-infowindow>
-			</gm-marker>
-		</gm-map>
-	</md-content>
-
-	<md-sidenav
-			class="md-sidenav-right"
-			md-component-id="sidenav-right"
-			md-is-locked-open="$mdMedia('gt-md')"
-			md-disable-backdrop>
-		<md-toolbar>
-			<h1 class="md-toolbar-tools">Comentários</h1>
-		</md-toolbar>
-		<md-content>
-			<md-list flex>
-				<md-list-item class="md-3-line md-long-text" ng-click="null">
-					<img ng-src="https://lh6.ggpht.com/JWk0waKYxAVbuIavYsRimLK3859m_s-MWJpSXkoQ8ejLpPvge_iF_xHiomfMAgYb1oF-=w300" class="md-avatar" alt="Danger" />
-					<div class="md-list-item-text">
-						<h3>Título ou nome do usuário</h3>
-						<p>
-							Aqui vai o texto ou comentário da pessoa, ou mesmo um resumo do formulário que a pessoa preencheu.
-							A imagem na lateral pode ser algum indicativo do nível de alerta usando cores (Até porque não faz muito sentido colocar a foto do usuário, e colocar uma miniatura do mapa é meio inviável para o protótipo).
-							Se quiserem, dá pra colocar uma cor no background dado o nível de alerta.
-						</p>
-					</div>
-				</md-list-item>
-			</md-list>
-		</md-content>
-	</md-sidenav>
-</section>
+<ng-view layout="row" flex></ng-view>
 
 
 <script src="/js/all.min.js"></script>
