@@ -1,8 +1,18 @@
-<md-dialog aria-label="{{item.title}}" flex-sm="95" flex-md="65" flex-lg="50">
+<md-dialog aria-label="{{item.title}}" flex-sm="95" flex-md="65" flex-lg="60" style="max-height: 90vh;" theme="{{item.level}}">
 	<md-toolbar>
 		<div class="md-toolbar-tools">
-			<h2>{{bla}} - {{item.title}}</h2>
+			<h2>{{item.title}}</h2>
+
+			<!--<hr/>-->
 			<span flex></span>
+			<h2>Nível: </h2>
+
+			<md-input-container class="md-block" flex-sm="100">
+					<md-select ng-model="item.level" class="dark-bg" aria-label="Nível">
+						<md-option ng-repeat="level in levels" value="{{level.key}}" aria-label="level.value">{{level.value}}</md-option>
+					</md-select>
+				</md-input-container>
+
 			<md-button class="md-icon-button" ng-click="cancel()">
 				<i class="material-icons" aria-label="Close dialog">close</i>
 			</md-button>
@@ -10,18 +20,37 @@
 	</md-toolbar>
 	<form>
 		<md-dialog-content>
+			<gm-map
+					style="height: 250px"
+					layout="column"
+					layout-fill
+					ng-cloak
+					center="item.latlong"
+					options="{zoom: 16, mapTypeControl: false, streetViewControl: false, zoomControl: false}"
+			>
+				<gm-circle
+						center="map.getCenter()"
+						options="{radius: 100, fillColor: colors[item.level], fillOpacity: 0.6, strokeColor: colors[item.level], strokeWeight:3, strokeOpacity:0.7}"
+				></gm-circle>
+			</gm-map>
+
 			<div class="md-dialog-content">
-				<h2>{{item.id}}</h2>
-				<p>{{item.text}}</p>
+				<h2>{{item.title}}</h2>
+				<p>{{item.description}}</p>
+
+				<p><b>Tipo:</b> {{item.type}}</p>
+				<p><b>Data:</b> {{item.date}}</p>
+				<p><b>Usuário está no local:</b> <i class="material-icons" ng-if="item.inplace">check</i><i class="material-icons" ng-if="!item.inplace">close</i></p>
+				<img src="{{item.photo}}" ng-if="item.photo" style="width: 100%;">
 			</div>
 		</md-dialog-content>
 		<md-dialog-actions layout="row">
 			<span flex></span>
-			<md-button ng-click="updated('not useful')">
-				Not Useful
+			<md-button ng-click="ask_more()">
+				Pedir mais informações
 			</md-button>
-			<md-button ng-click="updated('useful')">
-				Useful
+			<md-button ng-click="alert_nearby()">
+				Alertar usuários próximos
 			</md-button>
 		</md-dialog-actions>
 	</form>

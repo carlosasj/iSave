@@ -11,8 +11,11 @@
     "angular-aria": "^1.5.5",
     "angular-messages": "^1.5.5",
     "angular-material": "git+https://github.com/angular/bower-material.git#master",
-
     "angular-route": "^1.5.3",
-    "angular-google-maps-native": "^2.0.0"
+    "angular-google-maps-native": "^2.0.0",
+    "angular-ui-notification": "^0.2.0"
+  },
+  "resolutions": {
+    "angular": "1.5.7"
   }
 }

@@ -21,16 +21,21 @@
 		</md-content>
 	</md-sidenav>
 
-	<md-content flex layout-padding class="md-whiteframe-8dp" style="z-index: 62">
+	<md-content flex class="md-whiteframe-8dp" style="z-index: 62">
 		<gm-map
 				layout="column"
 				layout-fill
 				ng-cloak
 				gm-address="{address: 'Av. São Carlos, São Carlos, SP'}"
 				options="{zoom: 13, mapTypeControl: false, streetViewControl: false, zoomControl: false}">
-			<gm-marker position="map.getCenter()" ng-click="">
-				<gm-infowindow options="{content: 'Av. São Carlos, São Carlos, SP'}"></gm-infowindow>
-			</gm-marker>
+			<gm-circle
+					center="alert.latlong"
+					options="{radius: cot(100, 200, alert.highlight), fillColor: colors[alert.level], fillOpacity: 0.6, strokeColor: colors[alert.level], strokeWeight:3, strokeOpacity:0.7}"
+					on-click="showAdvanced($event, alert.id)"
+					ng-mouseover="highlight(alert.id, true)"
+					ng-mouseleave="highlight(alert.id, false)"
+					ng-repeat="alert in alerts">
+			</gm-circle>
 		</gm-map>
 	</md-content>
 
@@ -40,15 +45,15 @@
 			md-is-locked-open="$mdMedia('gt-md')"
 			md-disable-backdrop>
 		<md-toolbar>
-			<h1 class="md-toolbar-tools">Comentários {{asd}}</h1>
+			<h1 class="md-toolbar-tools">Comentários</h1>
 		</md-toolbar>
 		<md-content>
 			<md-list flex>
-				<md-list-item class="md-3-line md-long-text" ng-click="showAdvanced($event, alert.id)" ng-repeat="alert in alerts">
+				<md-list-item class="md-3-line md-long-text" ng-click="showAdvanced($event, alert.id)" ng-repeat="alert in alerts" ng-mouseover="highlight(alert.id, true)" ng-mouseleave="highlight(alert.id, false)">
 					<img ng-src="https://lh6.ggpht.com/JWk0waKYxAVbuIavYsRimLK3859m_s-MWJpSXkoQ8ejLpPvge_iF_xHiomfMAgYb1oF-=w300" class="md-avatar" alt="Danger" />
 					<div class="md-list-item-text">
 						<h3>{{ alert.title }}</h3>
-						<p>{{ alert.text }}</p>
+						<p>{{ alert.description }}</p>
 					</div>
 				</md-list-item>
 			</md-list>

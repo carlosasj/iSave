@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                     'bower_components/angular-aria/angular-aria.min.js',
                     'bower_components/angular-messages/angular-messages.min.js',
                     // 'bower_components/angular-cookies/angular-cookies.min.js',
-                    // 'bower_components/angular-ui-notification/dist/angular-ui-notification.min.js',
+                    'bower_components/angular-ui-notification/dist/angular-ui-notification.min.js',
                     'bower_components/angular-google-maps-native/dist/angular-google-maps-native.min.js',
                     // 'bower_components/textAngular/dist/textAngular-rangy.min.js',
                     // 'bower_components/textAngular/dist/textAngular-sanitize.min.js',
@@ -62,6 +62,7 @@ module.exports = function(grunt) {
                 src: [
                     'bower_components/angular/angular-csp.css',
                     'bower_components/angular-material/angular-material.min.css',
+                    'bower_components/angular-ui-notification/dist/angular-ui-notification.min.css',
                     // 'bower_components/angular-loading-bar/build/loading-bar.min.css',
                     // 'bower_components/textAngular/dist/textAngular.css',
                     // 'bower_components/ng-img-crop/compile/minified/ng-img-crop.css',

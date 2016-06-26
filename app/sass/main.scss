@@ -1,3 +1,7 @@
-.asdfg {
-  border-color: black;
+md-select.dark-bg:not([disabled]):focus ._md-select-value {
+  color: #fff;
+}
+
+.active {
+  background: rgba(158,158,158,0.2);
 }
