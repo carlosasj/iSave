@@ -30,6 +30,42 @@ angular.module("iSaveApp").controller("indexCtrl", ["$scope", "$mdDialog", "$mdM
             inplace: true,
             photo: "http://portal.pmf.sc.gov.br/arquivos/imagens/18_01_2010_13_59_e6234913adde5d509213f340949e8dd9.jpg",
             highlight: false
+        },
+        {
+            id: 3,
+            level: "muito_alto",
+            latlong: [-22.002435, -47.88715],
+            title: "Incêndio no meu prédio!!!",
+            description: "Tem um incêndio no meu prédio, 3 apartamentos estão em chamas!!!",
+            type: "incendio",
+            date: "2016-06-23",
+            inplace: true,
+            photo: "http://s.glbimg.com/jo/g1/f/original/2011/12/21/vilaisabel.jpg",
+            highlight: false
+        },
+        {
+            id: 4,
+            level: "moderado",
+            latlong: [-22.016813, -47.912140],
+            title: "Alagamento na Av Sãocarlense",
+            description: "A Av Trabalhador Sãocarlense está alagada na altura do cristo, não dá pra passar agora",
+            type: "inundacao",
+            date: "2016-06-22",
+            inplace: false,
+            photo: "http://www.afolha.com.br/files/image/photo/153/noticia_f54c353f9d2c4ded52200f028d6b011e.jpg",
+            highlight: false
+        },
+        {
+            id: 5,
+            level: "alto",
+            latlong: [-22.016813, -47.912140],
+            title: "Buraco na pista aumentando",
+            description: "A chuva abriu um buraco na Miguel Petroni e ele parece estar aumentando",
+            type: "deslizamento",
+            date: "2016-06-22",
+            inplace: true,
+            photo: "http://tasabendo.com.br/wp-content/uploads/2015/07/buraco-na-pista.jpg",
+            highlight: false
         }
     ];
 
