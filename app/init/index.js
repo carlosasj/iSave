@@ -52,6 +52,21 @@ angular.module("iSaveApp").controller("indexCtrl", ["$scope", "$mdDialog", "$mdM
             {key: 'alto', value: 'Alto'},
             {key: 'muito_alto', value: 'Muito alto'}
         ];
+
+        $scope.fields = [""];
+
+        $scope.updateFields = function (id) {
+            if($scope.fields[id]) {
+                if (($scope.fields.length - 1) == id)
+                    $scope.fields.push("");
+            }
+        };
+
+        $scope.removeField = function (id) {
+            if ($scope.fields[id])
+                $scope.fields.splice(id, 1);
+        };
+
         $scope.hide = function() {
             $mdDialog.hide();
         };

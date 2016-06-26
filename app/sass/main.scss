@@ -1,3 +1,7 @@
+.md-moderado-theme md-select.dark-bg:not([disabled]):focus ._md-select-value {
+  color: #000;
+}
+
 md-select.dark-bg:not([disabled]):focus ._md-select-value {
   color: #fff;
 }

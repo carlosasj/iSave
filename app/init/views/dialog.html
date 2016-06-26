@@ -1,5 +1,5 @@
-<md-dialog aria-label="{{item.title}}" flex-sm="95" flex-md="65" flex-lg="60" style="max-height: 90vh;" theme="{{item.level}}">
-	<md-toolbar>
+<md-dialog aria-label="{{item.title}}" flex-sm="95" flex-md="65" flex-lg="60" style="max-height: 90vh;">
+	<md-toolbar md-theme="{{item.level}}" md-theme-watch>
 		<div class="md-toolbar-tools">
 			<h2>{{item.title}}</h2>
 
@@ -41,7 +41,17 @@
 				<p><b>Tipo:</b> {{item.type}}</p>
 				<p><b>Data:</b> {{item.date}}</p>
 				<p><b>Usuário está no local:</b> <i class="material-icons" ng-if="item.inplace">check</i><i class="material-icons" ng-if="!item.inplace">close</i></p>
-				<img src="{{item.photo}}" ng-if="item.photo" style="width: 100%;">
+			</div>
+			<img src="{{item.photo}}" ng-if="item.photo" style="width: 100%;">
+			<div class="md-dialog-content">
+				<form>
+					<h3>Caso queira pedir mais informações, crie campos abaixo:</h3>
+					<md-input-container class="md-block" flex-gt-sm ng-repeat="f in fields track by $index">
+						<md-icon class="material-icons" ng-click="removeField($index)" style="cursor: pointer">close</md-icon>
+						<input ng-model="fields[$index]" placeholder="Incluir campo" ng-keyup="updateFields($index)" aria-label="field">
+					</md-input-container>
+				</form>
+				<div style="height: 250px;"></div>
 			</div>
 		</md-dialog-content>
 		<md-dialog-actions layout="row">

@@ -29,6 +29,8 @@ angular.module("iSaveApp", [
     $mdThemingProvider.theme('alto').primaryPalette('deep-orange', {'default': '500'});
     $mdThemingProvider.theme('muito_alto').primaryPalette('red', {'default': '900'});
 
+    $mdThemingProvider.setDefaultTheme('default');
+
 }]).run(['$rootScope', function($rootScope) {
     // console.log("RUN!");
 }]);
