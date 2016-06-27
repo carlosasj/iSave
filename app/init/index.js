@@ -38,7 +38,7 @@ angular.module("iSaveApp").controller("indexCtrl", ["$scope", "$mdDialog", "$mdM
             title: "Incêndio no meu prédio!!!",
             description: "Tem um incêndio no meu prédio, 3 apartamentos estão em chamas!!!",
             type: "incendio",
-            date: "2016-06-23",
+            date: "2016-06-26",
             inplace: true,
             photo: "http://s.glbimg.com/jo/g1/f/original/2011/12/21/vilaisabel.jpg",
             highlight: false
@@ -47,10 +47,10 @@ angular.module("iSaveApp").controller("indexCtrl", ["$scope", "$mdDialog", "$mdM
             id: 4,
             level: "moderado",
             latlong: [-22.016813, -47.912140],
-            title: "Alagamento na Av Sãocarlense",
-            description: "A Av Trabalhador Sãocarlense está alagada na altura do cristo, não dá pra passar agora",
+            title: "Alagamento perto do shopping",
+            description: "A Av Francisco Pereira Lopes está alagada na altura do cristo, não dá pra passar agora",
             type: "inundacao",
-            date: "2016-06-22",
+            date: "2016-06-26",
             inplace: false,
             photo: "http://www.afolha.com.br/files/image/photo/153/noticia_f54c353f9d2c4ded52200f028d6b011e.jpg",
             highlight: false
@@ -58,13 +58,61 @@ angular.module("iSaveApp").controller("indexCtrl", ["$scope", "$mdDialog", "$mdM
         {
             id: 5,
             level: "alto",
-            latlong: [-22.016813, -47.912140],
+            latlong: [-21.993409, -47.918425],
             title: "Buraco na pista aumentando",
-            description: "A chuva abriu um buraco na Miguel Petroni e ele parece estar aumentando",
+            description: "A chuva abriu um buraco na Miguel Petroni e ele parece estar aumentando '-'",
             type: "deslizamento",
-            date: "2016-06-22",
+            date: "2016-06-25",
             inplace: true,
             photo: "http://tasabendo.com.br/wp-content/uploads/2015/07/buraco-na-pista.jpg",
+            highlight: false
+        },
+        {
+            id: 6,
+            level: "moderado",
+            latlong: [-22.004391, -47.890703],
+            title: "Deslizamento na av trab são-carlense",
+            description: "Teve um deslizamento de terra na trabalhador são-carlense, precisa dar a volta pela episcopal",
+            type: "deslizamento",
+            date: "2016-06-24",
+            inplace: false,
+            photo: "http://midia.gruposinos.com.br/_midias/jpg/2015/07/15/20150715092601-919576.jpg",
+            highlight: false
+        },
+        {
+            id: 7,
+            level: "muito_alto",
+            latlong: [-22.018944, -47.889824],
+            title: "Terreno vazio em chamas",
+            description: "Alguém jogou entulho em um terreno perto de casa e colocou fogo, e esse fogo está se espalhando. Muito. To com medo...",
+            type: "incendio",
+            date: "2016-06-24",
+            inplace: true,
+            photo: "http://s2.glbimg.com/g_8-OgqqeQfPWW7ZdclDci6w7Xs=/620x465/s.glbimg.com/jo/g1/f/original/2015/04/14/fogo2_1.png",
+            highlight: false
+        },
+        {
+            id: 8,
+            level: "alto",
+            latlong: [-22.021288, -47.884651],
+            title: "Pista cedeu",
+            description: "A pista cedeu neste ponto e um carro caiu no buraco",
+            type: "incendio",
+            date: "2016-06-23",
+            inplace: true,
+            photo: "http://www.alagoas24horas.com.br/wp-content/uploads/2009/01/dceaeac9bbda4fb39cd57ef115020ca7_segunda.jpg",
+            highlight: false
+        },
+        {
+            id: 9,
+            level: "muito_alto",
+            latlong: [-22.024618, -47.917510],
+            title: "ALAGOU TUDO",
+            description: "GENTE A ÁGUA TÁ LEVANDO TUDO AJUDA AQUI RÁPIDO",
+            type: "inundacao",
+            date: "2016-06-22",
+            inplace: true,
+            photo: "http://imgsapp.diariodepernambuco.com.br/app/noticia_127983242361/2015/06/30/583864/20150630094830937031u.jpg",
             highlight: false
         }
     ];
