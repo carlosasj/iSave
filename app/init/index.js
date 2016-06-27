@@ -114,6 +114,30 @@ angular.module("iSaveApp").controller("indexCtrl", ["$scope", "$mdDialog", "$mdM
             inplace: true,
             photo: "http://imgsapp.diariodepernambuco.com.br/app/noticia_127983242361/2015/06/30/583864/20150630094830937031u.jpg",
             highlight: false
+        },
+        {
+            id: 10,
+            level: "alto",
+            latlong: [-22.034961, -47.899421],
+            title: "Dois ônibus se chocaram",
+            description: "Dois ônibus se chocaram e os bombeiros fecharam a pista pois há risco de explosão",
+            type: "outros",
+            date: "2016-06-21",
+            inplace: true,
+            photo: "http://portalplantaopolicial.com.br/system/timeposts/covers/000/000/016/thumb/unnamed_%2812%29.jpg?1410499146",
+            highlight: false
+        },
+        {
+            id: 11,
+            level: "moderado",
+            latlong: [-22.016739, -47.906350],
+            title: "Está alagado na frente do SESC",
+            description: "A Av. Comendador Alfredo Maffei alagou na altura do SESC, precisa dar a volta por trás do SESC",
+            type: "inundacao",
+            date: "2016-06-21",
+            inplace: true,
+            photo: "http://og.infg.com.br/in/2999930-cc3-f29/FT1500A/550/Eu-Reporter-pista-alagada-na-Estrada-do-Rio-Morto-Foto-do-leitor-Marcos-Jose-dos-Santos.jpg",
+            highlight: false
         }
     ];
 
