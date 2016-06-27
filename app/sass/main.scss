@@ -9,3 +9,23 @@ md-select.dark-bg:not([disabled]):focus ._md-select-value {
 .active {
   background: rgba(158,158,158,0.2);
 }
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: content-box;
+  background-color: #BDBDBD;
+  border: 2px solid rgba(0,0,0,0);
+  border-radius: 8px;
+
+  &:hover {
+    background-color: color('grey', 'base');
+  }
+}
+
+.side-nav.fixed::-webkit-scrollbar-track {
+  margin-top: 64px;
+}
