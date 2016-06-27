@@ -10,9 +10,20 @@
 		<md-content layout-padding>
 			<form>
 				<md-input-container>
-					<label for="testInput">Test input</label>
-					<input type="text" id="testInput"
-								 ng-model="data" md-autofocus>
+					<label for="testInput">Filtrar texto</label>
+					<input type="text" id="testInput" ng-model="data.text" md-autofocus>
+				</md-input-container>
+				<md-input-container>
+					<h4>Nível do alerta</h4>
+					<div flex-xs flex="100" md-theme="nao_classificado"><md-checkbox ng-model="data.cb_nao_classificado" aria-label="Não Classificado">Não Classificado</md-checkbox></div>
+					<div flex-xs flex="100" md-theme="moderado"><md-checkbox ng-model="data.cb_moderado" aria-label="Moderado">Moderado</md-checkbox></div>
+					<div flex-xs flex="100" md-theme="alto"><md-checkbox ng-model="data.cb_alto" aria-label="Alto">Alto</md-checkbox></div>
+					<div flex-xs flex="100" md-theme="muito_alto"><md-checkbox ng-model="data.cb_muito_alto" aria-label="Muito Alto">Muito Alto</md-checkbox></div>
+				</md-input-container>
+				<md-input-container md-theme="nao_classificado">
+					<h4>Usuário no local</h4>
+					<div flex-xs flex="100"><md-checkbox ng-model="data.cb_inplace" aria-label="Usuário no local">Usuário no local</md-checkbox></div>
+					<div flex-xs flex="100"><md-checkbox ng-model="data.cb_notinplace" aria-label="Usuário fora do local">Usuário fora do local</md-checkbox></div>
 				</md-input-container>
 			</form>
 			<!--<md-button ng-click="close()" class="md-primary" hide-gt-md>-->
@@ -50,7 +61,8 @@
 		<md-content>
 			<md-list flex>
 				<md-list-item class="md-3-line md-long-text" ng-click="showAdvanced($event, alert.id)" ng-repeat="alert in alerts" ng-mouseover="highlight(alert.id, true)" ng-mouseleave="highlight(alert.id, false)">
-					<img ng-src="https://lh6.ggpht.com/JWk0waKYxAVbuIavYsRimLK3859m_s-MWJpSXkoQ8ejLpPvge_iF_xHiomfMAgYb1oF-=w300" class="md-avatar" alt="Danger" />
+					<!--<img ng-src="https://lh6.ggpht.com/JWk0waKYxAVbuIavYsRimLK3859m_s-MWJpSXkoQ8ejLpPvge_iF_xHiomfMAgYb1oF-=w300" class="md-avatar" alt="Danger" />-->
+					<div class="md-avatar {{alert.level}}"></div>
 					<div class="md-list-item-text">
 						<h3>{{ alert.title }}</h3>
 						<p>{{ alert.description }}</p>

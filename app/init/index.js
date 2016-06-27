@@ -6,6 +6,15 @@ angular.module("iSaveApp").controller("indexCtrl", ["$scope", "$mdDialog", "$mdM
         'muito_alto': "#B71C1C"
     };
 
+    $scope.data = {
+        cb_nao_classificado: true,
+        cb_moderado: true,
+        cb_alto: true,
+        cb_muito_alto: true,
+        cb_inplace: true,
+        cb_notinplace: true,
+    };
+
     $scope.alerts = [
         {
             id: 1,

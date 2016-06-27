@@ -29,3 +29,16 @@ md-select.dark-bg:not([disabled]):focus ._md-select-value {
 .side-nav.fixed::-webkit-scrollbar-track {
   margin-top: 64px;
 }
+
+.md-avatar.nao_classificado {
+  background-color: #03A9F4;
+}
+.md-avatar.moderado {
+  background-color: #FFC107;
+}
+.md-avatar.alto {
+  background-color: #FF5722;
+}
+.md-avatar.muito_alto {
+  background-color: #B71C1C;
+}

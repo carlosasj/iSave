@@ -23,11 +23,11 @@ angular.module("iSaveApp", [
                 'hue-3': 'A200'
             }
         )
-        .accentPalette('amber');
+        .accentPalette('light-blue', {'default': '800'});
 
-    $mdThemingProvider.theme('moderado').primaryPalette('amber', {'default': '500'});
-    $mdThemingProvider.theme('alto').primaryPalette('deep-orange', {'default': '500'});
-    $mdThemingProvider.theme('muito_alto').primaryPalette('red', {'default': '900'});
+    $mdThemingProvider.theme('moderado').primaryPalette('amber', {'default': '500'}).accentPalette('amber', {'default': '500'});
+    $mdThemingProvider.theme('alto').primaryPalette('deep-orange', {'default': '500'}).accentPalette('deep-orange', {'default': '500'});
+    $mdThemingProvider.theme('muito_alto').primaryPalette('red', {'default': '900'}).accentPalette('red', {'default': '900'});
 
     $mdThemingProvider.setDefaultTheme('default');
 
